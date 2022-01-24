@@ -53,7 +53,7 @@
                         <div class="icon">
                             <i class="fas fa-lock"></i>
                         </div>
-                        <input type="password" name='password' placeholder="Password"value="{{old('email')}}">
+                        <input type="password" name='password' placeholder="Password">
                     </div>
                     <div class="message">
                         @error('password')
