@@ -21,8 +21,8 @@
                         <div class="icon">
                             <i class="fas fa-user-circle"></i>
                         </div>
-                        <input type="text" name='name' placeholder="Username">
-                    </div>
+                        <input type="text" name='name' placeholder="Username" value="{{old('name')}}">
+                </div>
                     <div class="message">
                         @error('name')
                         <span class="" role="alert">
@@ -37,7 +37,7 @@
                         <div class="icon">
                             <i class="fas fa-envelope"></i>
                         </div>
-                        <input type="text" name="email" placeholder="Email">
+                        <input type="text" name="email" placeholder="Email" value="{{old('email')}}">
                     </div>
                     <div class="message">
                         @error('email')
@@ -53,7 +53,7 @@
                         <div class="icon">
                             <i class="fas fa-lock"></i>
                         </div>
-                        <input type="password" name='password' placeholder="Password">
+                        <input type="password" name='password' placeholder="Password"value="{{old('email')}}">
                     </div>
                     <div class="message">
                         @error('password')
@@ -83,7 +83,7 @@
                 <div class="form-row">
                     <div class="input">
                         <div class="icon"><i class="fas fa-phone-alt"></i></div>
-                        <input type="text" name="phoneNo" placeholder="Phone No">
+                        <input type="text" name="phoneNo" placeholder="Phone No"value="{{old('phoneNo')}}">
                     </div>
                     <div class="message">
                         @error('phoneNo')
@@ -99,8 +99,8 @@
                         <div class="icon">
                             <i class="fas fa-home"></i>
                         </div>
-                        <input type="text" name="address" placeholder="Home Address">
-                    </div>
+                        <input type="text" name="address" placeholder="Home Address"value="{{old('address')}}">
+                  </div>
                 </div>
 
 
