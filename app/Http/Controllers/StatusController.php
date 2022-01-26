@@ -60,8 +60,8 @@ class StatusController extends Controller
     }
 
     public function ifLate($id){
-
-        $check = DB::table('statuses')->where('bookID','=',$id)->where('studentID','=',Auth::id())->where('endTime','<',Carbon::now())->count();
+    
+        $check = status::where('bookID','=',$id)->where('studentID','=',Auth::id())->where('status','=','borrowed')->where('endTime','<=',Carbon::now())->count();
 
         if($check >=1){
             return true;
@@ -96,11 +96,11 @@ class StatusController extends Controller
 
     public function returnBook($id)
     {
-
-        if($this->ifLate($id)>=true){
+        if($this->ifLate($id)==true){
             Session::flash('error','You have excess the due date.Please pay the fine at the counter and return the book');
             return back();
         }
+        
         $returnBook = status::where('bookID', '=', $id)->update(['status' => 'returned']);
 
         $updateBook = Book::find($id)->update(['status' => 'available']);

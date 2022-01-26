@@ -330,16 +330,17 @@
     </script>
     @if (Session::has('success'))
     <script>
-        alert(' {{ Session::get('success') }}');
+        alert('{{ Session::get('success') }}');
     </script>
-       {{Session()->forget('success')}} 
+       
+
     @endif
 
     @if (Session::has('error'))
     <script>
         alert(' {{ Session::get('error') }}');
     </script>
-       {{Session()->forget('error')}} 
+       {{session()->forget('error')}} 
     
     @endif
 
