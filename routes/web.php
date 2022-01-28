@@ -21,7 +21,7 @@ Route::get('/', function () {
             return redirect('/banner');
         }
     } else {
-        return view('login');
+        return view('auth.login');
     }
 });
 
